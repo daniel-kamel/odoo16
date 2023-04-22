@@ -152,7 +152,7 @@ try:
     from werkzeug.middleware.proxy_fix import ProxyFix as ProxyFix_
     ProxyFix = functools.partial(ProxyFix_, x_for=1, x_proto=1, x_host=1)
 except ImportError:
-    from werkzeug.contrib.fixers import ProxyFix
+    from werkzeug.middleware.proxy_fix import ProxyFix
 
 try:
     from werkzeug.utils import send_file as _send_file
